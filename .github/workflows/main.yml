@@ -56,6 +56,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |          
-          sudo docker pull lapanthera161/lapanthera161
-          sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 lapanthera161/lapanthera161
+          docker pull lapanthera161/lapanthera161
+          docker stop $(sudo docker ps -a -q)
+          docker run --rm -d -p 5000:5000 lapanthera161/lapanthera161
